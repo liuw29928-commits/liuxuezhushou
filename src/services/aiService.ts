@@ -51,7 +51,7 @@ export async function* streamAIChat(messages: Message[]) {
       try {
         const json = JSON.parse(data);
         const text = json.choices?.[0]?.delta?.content;
-        if (text) yield text;
+        if (text) yield { text };
       } catch {
         // skip malformed chunks
       }

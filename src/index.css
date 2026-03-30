@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input, textarea {
+  @apply transition-all duration-200;
+}
